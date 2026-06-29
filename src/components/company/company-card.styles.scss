@@ -1,0 +1,136 @@
+.experience-right {
+  padding: 2.2rem;
+
+  .company-description {
+    .company-heading {
+      color: var(--text);
+      font-family: "poppins-bold", sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.05rem;
+    }
+
+    .company-from {
+      font-family: "poppins-regular", sans-serif;
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .company-intro {
+      font-family: "poppins-regular", sans-serif;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+      line-height: 1.7;
+    }
+
+    .company-stack {
+      margin-bottom: 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+
+      .company-stack-heading {
+        font-family: "poppins-bold", sans-serif;
+        color: var(--text);
+        margin-right: 0.3rem;
+      }
+
+      .company-stack-item {
+        font-family: "poppins-regular", sans-serif;
+        font-size: 0.78rem;
+        border-radius: 999px;
+        padding: 0.32rem 0.7rem;
+        background: var(--accent-soft);
+        color: var(--accent);
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+      }
+    }
+
+    .company-roles {
+      margin: 1rem 0 1.4rem;
+
+      p {
+        font-family: "poppins-regular", sans-serif;
+        color: var(--text-muted);
+
+        strong,
+        span {
+          font-family: "poppins-bold", sans-serif;
+          color: var(--text);
+        }
+      }
+    }
+  }
+
+  .experience-right-details {
+    .company-work-res {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      font-family: "poppins-regular", sans-serif;
+      color: var(--text-muted);
+
+      .work-heading {
+        margin-bottom: 0.8rem;
+        letter-spacing: 0.05rem;
+        color: var(--text);
+        font-size: 1rem;
+      }
+
+      .company-responsiblity {
+        width: 40%;
+
+        .company-responsibility-item {
+          font-size: 0.88rem;
+        }
+
+        li {
+          display: list-item;
+          line-height: 1.7;
+          margin-left: 1.1rem;
+
+          &::marker {
+            color: var(--accent);
+          }
+        }
+      }
+
+      .company-work {
+        width: 60%;
+
+        .company-work-item {
+          font-size: 0.88rem;
+        }
+
+        li {
+          display: list-item;
+          line-height: 1.7;
+          margin-left: 1.1rem;
+
+          &::marker {
+            color: var(--accent);
+          }
+        }
+      }
+
+      .work-hundred {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-right .experience-right-details .company-work-res {
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .company-responsiblity,
+    .company-work {
+      width: 100%;
+    }
+  }
+}
