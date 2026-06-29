@@ -1,0 +1,67 @@
+.mid-about {
+  .mid-about-container {
+    width: 100%;
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 2rem;
+
+    .mid-about-left {
+      width: 40%;
+      padding: 2rem;
+      border-radius: var(--radius);
+      background: var(--surface);
+      border: 1px solid var(--border);
+
+      .about-left-div {
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .heading {
+          font-family: "poppins-bold", sans-serif;
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          letter-spacing: 0.2rem;
+          margin-bottom: 0.4rem;
+          color: var(--accent);
+        }
+
+        .values {
+          font-family: "poppins-regular", sans-serif;
+          font-size: 0.98rem;
+          line-height: 1.8;
+          color: var(--text-muted);
+        }
+      }
+    }
+
+    .mid-about-right {
+      width: 60%;
+
+      .skill-heading {
+        margin-bottom: 1.5rem;
+
+        .heading {
+          font-family: "poppins-bold", sans-serif;
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          letter-spacing: 0.2rem;
+          color: var(--accent);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mid-about .mid-about-container {
+    flex-direction: column;
+
+    .mid-about-left,
+    .mid-about-right {
+      width: 100%;
+    }
+  }
+}

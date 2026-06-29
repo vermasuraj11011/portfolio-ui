@@ -1,0 +1,43 @@
+.mid-about-right {
+  .skill-content {
+    .skill-container {
+      position: relative;
+      margin-bottom: 1rem;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--border);
+      transition: padding-left var(--t);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        height: 2px;
+        width: 0;
+        background: var(--grad);
+        transition: width var(--t);
+      }
+
+      &:hover {
+        padding-left: 0.6rem;
+
+        &::before {
+          width: 100%;
+        }
+
+        .skill {
+          color: var(--text);
+        }
+      }
+
+      .skill {
+        font-family: "poppins-semibold", sans-serif;
+        font-size: 0.92rem;
+        letter-spacing: 0.12rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        transition: color var(--t);
+      }
+    }
+  }
+}
