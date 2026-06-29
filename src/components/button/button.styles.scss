@@ -1,0 +1,43 @@
+.bottom-about-container {
+  .ancor {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 16rem;
+    padding: 1.1rem 2.4rem;
+    font-family: "poppins-bold", sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 999px;
+    transition: transform var(--t), box-shadow var(--t), background var(--t),
+      border-color var(--t), color var(--t);
+
+    /* Primary (first button) — filled gradient */
+    &:first-child {
+      color: #fff;
+      background: var(--grad);
+      border: 1px solid transparent;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--glow);
+      }
+    }
+
+    /* Secondary (download) — outline */
+    &:last-child {
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+
+      &:hover {
+        transform: translateY(-3px);
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+    }
+  }
+}
