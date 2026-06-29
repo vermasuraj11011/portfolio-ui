@@ -1,0 +1,179 @@
+.project-list-container {
+  margin: 4rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .project-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    transition: transform var(--t), border-color var(--t), box-shadow var(--t);
+
+    &:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-strong);
+      box-shadow: var(--shadow-lg);
+    }
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .project-card-image {
+      width: 50%;
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .project-image {
+        width: 100%;
+        height: 100%;
+        max-height: 280px;
+        object-fit: cover;
+        transition: transform 0.5s var(--ease);
+
+        &:hover {
+          transform: scale(1.06);
+        }
+      }
+    }
+
+    .project-card-content {
+      width: 50%;
+      padding: 0.5rem 1rem;
+
+      .right-align {
+        text-align: right;
+      }
+
+      .project-card-heading {
+        font-family: "poppins-bold", sans-serif;
+        text-transform: uppercase;
+        color: var(--text);
+        font-size: 1.25rem;
+        line-height: 1.4;
+        margin-bottom: 0.8rem;
+        letter-spacing: 0.05rem;
+      }
+
+      .project-card-description {
+        font-family: "poppins-regular", sans-serif;
+        color: var(--text-muted);
+        margin-bottom: 1.4rem;
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+
+      .project-card-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        font-family: "poppins-regular", sans-serif;
+        font-size: 0.72rem;
+        margin-bottom: 1.4rem;
+
+        span {
+          padding: 0.32rem 0.7rem;
+          border-radius: 999px;
+          background: var(--accent-soft);
+          color: var(--accent);
+          letter-spacing: 0.05rem;
+          text-transform: uppercase;
+        }
+      }
+
+      &.right-align .project-card-stack {
+        justify-content: flex-end;
+      }
+
+      .project-card-links {
+        display: flex;
+        gap: 0.8rem;
+        margin-top: 1rem;
+
+        a {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 6rem;
+          padding: 0.6rem 1.2rem;
+          font-family: "poppins-semibold", sans-serif;
+          font-size: 0.85rem;
+          letter-spacing: 0.05rem;
+          text-decoration: none;
+          cursor: pointer;
+          border-radius: 999px;
+          transition: transform var(--t), box-shadow var(--t), background var(--t),
+            color var(--t), border-color var(--t);
+        }
+
+        a:first-child {
+          color: #fff;
+          background: var(--grad);
+          border: 1px solid transparent;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--glow);
+          }
+        }
+
+        a:last-child {
+          color: var(--text);
+          background: transparent;
+          border: 1px solid var(--border-strong);
+
+          &:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+            color: var(--accent);
+          }
+        }
+      }
+    }
+
+    &.reverse .project-card-links {
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .project-list-container .project-card {
+    &,
+    &.reverse {
+      flex-direction: column;
+    }
+
+    .project-card-image,
+    .project-card-content {
+      width: 100%;
+    }
+
+    .project-card-content {
+      .right-align {
+        text-align: left;
+      }
+
+      &.right-align .project-card-stack,
+      .project-card-links {
+        justify-content: flex-start;
+      }
+    }
+
+    &.reverse .project-card-links {
+      justify-content: flex-start;
+    }
+  }
+}
