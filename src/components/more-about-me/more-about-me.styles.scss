@@ -1,0 +1,34 @@
+.content-container {
+  .more-about-me {
+    width: fit-content;
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    text-transform: uppercase;
+    padding: 16px 30px;
+    font-size: 12px;
+    cursor: pointer;
+    background: var(--surface);
+    transition: border-color var(--t), background var(--t), transform var(--t),
+      box-shadow var(--t);
+
+    &:hover {
+      border-color: transparent;
+      background: var(--grad);
+      transform: translateY(-3px);
+      box-shadow: var(--glow);
+    }
+
+    .more-about-me-container {
+      color: var(--text);
+      letter-spacing: 0.25rem;
+      font-family: "poppins-bold", sans-serif;
+
+      &::after {
+        content: "\f107";
+        font-family: fontAwesome;
+        position: relative;
+        left: 10px;
+      }
+    }
+  }
+}
