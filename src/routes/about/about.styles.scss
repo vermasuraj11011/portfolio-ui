@@ -1,0 +1,36 @@
+.about {
+  padding: 6rem 1.6rem;
+  max-width: var(--container);
+  margin: auto;
+
+  .about-div {
+    margin: 1rem 0;
+  }
+
+  .heading-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2.5rem;
+
+    h3 {
+      font-family: "poppins-bold", sans-serif;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      letter-spacing: 0.35rem;
+      margin-bottom: 0.6rem;
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      font-family: "poppins-semibold", sans-serif;
+      color: var(--text);
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      line-height: 1.25;
+    }
+  }
+}

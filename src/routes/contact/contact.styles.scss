@@ -1,0 +1,100 @@
+.contact {
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  padding: 6rem 1.6rem 7rem;
+  color: var(--text);
+
+  .contact-container {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .contact-heading-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 3rem;
+
+      .contact-heading {
+        font-size: 1.5rem;
+        letter-spacing: 0.35rem;
+        margin-bottom: 0.6rem;
+        text-transform: uppercase;
+        font-family: "poppins-bold", sans-serif;
+        background: var(--grad-text);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .below-heading {
+        font-size: clamp(1.6rem, 4vw, 2.2rem);
+        line-height: 1.25;
+        color: var(--text);
+        font-family: "poppins-semibold", sans-serif;
+        margin-bottom: 0.8rem;
+      }
+
+      .lead-paragraph {
+        color: var(--text-muted);
+        font-family: "poppins-regular", sans-serif;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+    }
+
+    .contact-form {
+      width: 100%;
+      padding: 2.2rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-method {
+      margin-top: 4rem;
+      display: flex;
+      gap: 1.2rem;
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .contact-social {
+      margin-top: 3.5rem;
+      width: 100%;
+
+      .contact-social-container {
+        display: flex;
+        justify-content: center;
+        gap: 0.8rem;
+
+        .social-link {
+          display: grid;
+          place-items: center;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          font-size: 1.25rem;
+          color: var(--text-muted);
+          background: var(--surface);
+          border: 1px solid var(--border);
+          transition: color var(--t), background var(--t), transform var(--t),
+            border-color var(--t), box-shadow var(--t);
+
+          &:hover {
+            color: #fff;
+            background: var(--grad);
+            border-color: transparent;
+            transform: translateY(-4px);
+            box-shadow: var(--glow);
+          }
+        }
+      }
+    }
+  }
+}

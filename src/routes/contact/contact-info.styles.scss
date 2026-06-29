@@ -1,0 +1,61 @@
+.contact-method {
+  .contact-method-container {
+    flex: 1 1 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.8rem 1.2rem;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    transition: transform var(--t), border-color var(--t);
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-strong);
+    }
+
+    .icon-container {
+      font-family: "icomoon", serif !important;
+      font-style: normal;
+      font-size: 2rem;
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      color: var(--accent);
+
+      i {
+        font-style: normal;
+      }
+
+      .icon-e995::before {
+        content: "\e995";
+      }
+      .icon-e96f::before {
+        content: "\e96f";
+      }
+      .icon-e993::before {
+        content: "\e993";
+      }
+    }
+
+    .contact-method-heading {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      color: var(--accent);
+      font-family: "poppins-bold", sans-serif;
+      margin: 1.3rem auto 0.6rem;
+    }
+
+    .contact-method-para {
+      font-size: 0.98rem;
+      font-family: "poppins-regular", sans-serif;
+      color: var(--text-muted);
+    }
+  }
+}
